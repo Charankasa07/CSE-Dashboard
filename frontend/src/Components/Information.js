@@ -6,7 +6,7 @@ import axios from "axios";
 import "./Information.css";
 
 function Information() {
-  const API_URL = "http://localhost:3000/get-students";
+  const API_URL = "https://cse-dashboard-api.vercel.app/get-students";
   const [studentDetails, setstudentDetails] = useState([]);
   const [filterStudents, setfilterStudents] = useState([]);
   const [tobeSearch , settobeSearch] = useState([])

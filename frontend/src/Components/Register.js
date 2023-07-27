@@ -3,7 +3,7 @@ import { Form, FormCheck, FormControl, FormText } from "react-bootstrap";
 import "./Register.css";
 
 function Register() {
-  const API_URL = "http://localhost:3000/register";
+  const API_URL = "https://cse-dashboard-api.vercel.app/register";
   const [message , setmessage] = useState('')
   const [name, setname] = useState(null);
   const [id, setid] = useState(null);
@@ -35,16 +35,17 @@ function Register() {
       };
       console.log(userData);
       // try {
-      // await axios.post(API_URL + '/register',JSON.stringify(userData)).then(res=>console.log(res)).catch(err => console.log(err.message))
+      const response = await axios.post(API_URL,userData)
+      console.log(response.data);
       // console.log(response);
-      await fetch(API_URL, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userData),
-      });
+      // await fetch(API_URL, {
+      //   method: "POST",
+      //   headers: {
+      //     Accept: "application/json",
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(userData),
+      // });
       setmessage("Success")
       // } catch (error) {
       //   console.log(error.message);
