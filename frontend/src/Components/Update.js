@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Form, FormControl, FormText } from "react-bootstrap";
 
 function Update() {
-  const API_URL = "http://localhost:3000/update";
+  const API_URL = "https://cse-dashboard-api.vercel.app/update";
   const [id, setid] = useState(null);
   const [placedCompany, setplacedCompany] = useState(null);
   const [placedRole, setplacedRole] = useState(null);

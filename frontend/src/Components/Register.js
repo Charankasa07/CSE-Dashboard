@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form, FormCheck, FormControl, FormText } from "react-bootstrap";
+import axios from 'axios'
 import "./Register.css";
 
 function Register() {

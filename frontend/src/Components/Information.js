@@ -10,8 +10,8 @@ function Information() {
   const [studentDetails, setstudentDetails] = useState([]);
   const [filterStudents, setfilterStudents] = useState([]);
   const [tobeSearch , settobeSearch] = useState([])
-  const [filter, setfilter] = useState("");
-  const [message , setmessage] = useState("")
+  // const [filter, setfilter] = useState("");
+  // const [message , setmessage] = useState("")
 
   useEffect(() => {
     const getstudentDetails = async () => {
@@ -90,7 +90,7 @@ function Information() {
         </select>
       </div>
       <div className="student-container">
-        <h4>{message}</h4>
+        {/* <h4>{message}</h4> */}
         {filterStudents ? filterStudents.map((item) => (
             <Student student={item} key={item._id}/>
           )) : alert("No students found")}
