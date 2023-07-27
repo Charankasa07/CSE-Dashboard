@@ -13,7 +13,10 @@ const app = express();
 const { student_details, placement_details } = require("./validation");
 const student_schema = require("./models/student");
 
-app.use(cors())
+app.use(cors({
+  methods:["POST","GET"],
+  credentials:true
+}))
 app.use(express.json())
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: false }));
