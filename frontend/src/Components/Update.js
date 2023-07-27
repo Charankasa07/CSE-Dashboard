@@ -30,15 +30,15 @@ function Update() {
       // try {
       // await axios.post(API_URL + '/register',JSON.stringify(userData)).then(res=>console.log(res)).catch(err => console.log(err.message))
       // console.log(response);
-      const response = await fetch(API_URL, {
+       await fetch(API_URL, {
         method: "POST",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify(userData),
-      });
-      console.log(response);
+      }).then(res=> console.log(res)).catch(err => console.log(err))
+      // console.log(response);
       // } catch (error) {
       //   console.log(error.message);
       // }
