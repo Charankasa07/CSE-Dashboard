@@ -20,7 +20,7 @@ app.use(cors({
 }))
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://cse-dashboard-api.vercel.app");
+  res.setHeader("Access-Control-Allow-Origin", "https://cse-dashboard.vercel.app");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
