@@ -14,6 +14,7 @@ const { student_details, placement_details } = require("./validation");
 const student_schema = require("./models/student");
 
 app.use(cors({
+  origin : ["https://cse-dashboard-api.vercel.app"],
   methods:["POST","GET"],
   credentials:true
 }))
