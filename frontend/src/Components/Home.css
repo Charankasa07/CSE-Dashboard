@@ -1,0 +1,13 @@
+.main{
+    height: 92vh;
+    background-color:rgb(202, 229, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+img{
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+}

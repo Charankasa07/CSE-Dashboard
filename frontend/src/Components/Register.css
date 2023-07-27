@@ -1,0 +1,76 @@
+*{
+    font-family: Zapf Chancery;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+    flex-direction: column;
+    gap: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid rgb(141, 217, 255);
+    padding: 3%;
+    box-shadow: 12px 12px 15px rgb(141, 217, 255);
+    border-radius: 5px;
+    
+}
+.form:hover{
+    box-shadow: 15px 15px 15px rgb(77, 166, 244);
+}
+.input{
+    height: 40px;
+    width: 250px;
+    font-size: 15px;
+    border-radius: 5px;
+    border:2px solid  darkgray;
+    transition: 0.3s ease;
+    padding: 5px;
+}
+.input:focus,.input:hover{
+    border: 1px solid rgb(77, 166, 244);
+    outline: rgb(77, 166, 244);
+    outline-offset: 3px;
+    border-right-width:2px ;
+    border-bottom-width:2px ;
+    border-radius: 5px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    padding: 5px;
+}
+.heading{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(20, 69, 111);
+    font-weight: bold;
+}
+.submit-button{
+    font-weight: bold;
+    font-size: 15px;
+    height: 40px;
+    width: 130px;
+    border-radius: 5px;
+    border-color: aliceblue;
+    background: linear-gradient(70deg,rgb(77, 166, 244), rgb(192, 241, 254), #FFFFFF);
+    transition: 1s ease-in;
+}
+.submit-button:hover{
+    background: linear-gradient(-70deg,rgb(77, 166, 244), rgb(192, 241, 254), #FFFFFF);
+    transition: 1s ease-in;
+}
+.higherStudies{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.higherStudies-title{
+    font-size: 15px;
+}
