@@ -56,6 +56,7 @@ app.post("/register", async (req, res) => {
 });
 
 app.post("/update", async (req, res) => {
+  console.log(req.body);
   let mac_address;
   await mac.one(function (err, mac) {
     mac_address = mac;
