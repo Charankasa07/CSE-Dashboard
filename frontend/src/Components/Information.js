@@ -16,10 +16,20 @@ function Information() {
   useEffect(() => {
     const getstudentDetails = async () => {
       try {
-        const response = await axios.get(API_URL);
-        setstudentDetails(response.data);
-        setfilterStudents(response.data);
-      } catch (err) {}
+        // const response = await axios.get(API_URL);
+        // setstudentDetails(response.data);
+        // setfilterStudents(response.data);
+        await fetch(API_URL, {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        }).then(res => setstudentDetails(res.data)).catch(err=> console.log(err));
+        setfilterStudents(studentDetails)
+      } catch (err) {
+        console.log(err);
+      }
     };
     getstudentDetails();
   }, [API_URL]);

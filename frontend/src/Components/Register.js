@@ -36,17 +36,17 @@ function Register() {
       };
       console.log(userData);
       // try {
-      const response = await axios.post(API_URL,userData)
-      console.log(response.data);
+      // const response = await axios.post(API_URL,userData)
+      // console.log(response.data);
       // console.log(response);
-      // await fetch(API_URL, {
-      //   method: "POST",
-      //   headers: {
-      //     Accept: "application/json",
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(userData),
-      // });
+      await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      });
       setmessage("Success")
       // } catch (error) {
       //   console.log(error.message);
