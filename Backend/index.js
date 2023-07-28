@@ -19,14 +19,14 @@ const student_schema = require("./models/student");
 //   credentials:true
 // }))
 
-app.use((req, res, next) => {
-//   req.setHeader(`Access-Control-Allow-Origin : https://rguktsklmplacements.web.app`);
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept"
-//   );
-//   next();
-// });
+// app.use((req, res, next) => {
+// //   req.setHeader(`Access-Control-Allow-Origin : https://rguktsklmplacements.web.app`);
+// //   res.header(
+// //     "Access-Control-Allow-Headers",
+// //     "Origin, X-Requested-With, Content-Type, Accept"
+// //   );
+// //   next();
+// // });
 
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'https://rguktsklmplacements.web.app');
@@ -149,6 +149,7 @@ app.get("/get-students/:filter", async (req, res) => {
 });
 
 app.get('/get-students', async (req,res)=>{
+  res.setHeader('Access-Control-Allow-Origin', 'https://rguktsklmplacements.web.app');
   try {
       console.log("hi");
       const data = await student_schema.find()
@@ -163,4 +164,4 @@ app.get("/", (req, res) => {
 });
 
 const port = process.env.PORT || 3000;
-app.listen(port, console.log(`Listening on port ${port}`));
+app.listen(port, console.log(`Listening on port ${port}`))
