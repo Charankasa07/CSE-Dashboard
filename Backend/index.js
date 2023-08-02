@@ -30,6 +30,7 @@ const student_schema = require("./models/student");
 
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'https://rguktsklmplacements.web.app');
+  res.setHeader("Vary","Origin");
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -149,7 +150,6 @@ app.get("/get-students/:filter", async (req, res) => {
 });
 
 app.get('/get-students', async (req,res)=>{
-  res.setHeader('Access-Control-Allow-Origin', 'https://rguktsklmplacements.web.app');
   try {
       console.log("hi");
       const data = await student_schema.find()
