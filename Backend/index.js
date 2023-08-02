@@ -21,7 +21,7 @@ const student_schema = require("./models/student");
 
 app.use((req, res, next) => {
   req.setHeader(`Access-Control-Allow-Origin : https://rguktsklmplacements.web.app`);
-  res.header(
+  res.setHeader(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
   );
