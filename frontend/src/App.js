@@ -16,7 +16,6 @@ function App() {
     // </BrowserRouter>
     <Router>
       <Header/>
-      <div className='App'>
       <Switch>
         <Route exact path='/'>
           <Home />
@@ -31,7 +30,6 @@ function App() {
           <Information/>
         </Route>
       </Switch>
-      </div>
     </Router>
   );
 }
